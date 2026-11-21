@@ -56,7 +56,7 @@ Deploy the repository to Vercel or Netlify using the default Vite build settings
 
 The client reuses Supabase's persisted session or calls `signInAnonymously()` when none exists. Every task, label, label association, and activity row is tied to the authenticated `user_id`. RLS restricts rows to `auth.uid()`. Composite foreign keys prevent a user from associating a label with another user's task. Activity rows are written by a constrained database trigger; authenticated clients receive read access but no direct write grants for the activity table. User identity is not simulated in local storage and client-side filtering is not the isolation boundary.
 
-## Implemented advanced features
+## Implemented features
 
 Title and priority filters, due-date indicators, status statistics, custom label creation, renaming, color editing, deletion, multi-label assignment and filtering, and a database-audited activity timeline are implemented. Deleting a label cascades only its task associations; tasks remain. Activity begins when the migration is installed; existing tasks are retained and do not receive synthetic history. Realtime sync is not included.
 
