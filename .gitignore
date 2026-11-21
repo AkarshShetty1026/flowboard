@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+coverage/
+.env*
+!.env.example
+!.env.*.example
+*.tsbuildinfo
+.vercel/
+.netlify/
+.vite/
+*.log
+*.tmp
+*.temp
+Thumbs.db
+.DS_Store
